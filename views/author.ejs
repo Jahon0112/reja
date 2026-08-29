@@ -1,1 +1,165 @@
-<div>Hello World!</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet"
+     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="main_frame">
+            <div class="left_frame">
+                <div class="left_1">
+                    <div class="left_1-1">
+                        <img src="images/profile.png"
+                        width="156px"
+                        height="142px" 
+                        alt="">
+                    </div>
+                    <div class="left_1-2"><%=user.name%></div>
+                    <div class="left_1-3"> <%=user.profession%></div>
+                    <div class="left-icons">
+                      <a href="link_href"> 
+                       <div class="icon">
+                        <img src="icon/Vector1.svg" alt="icon-1">
+                       </div> 
+                       <a href="link_href"> 
+                       <div class="icon">
+                        <img src="icon/Vector2.svg" alt="icon-1">
+                       </div> 
+                       <a href="link_href"> 
+                       <div class="icon">
+                        <img src="icon/Vector3.svg" alt="icon-1">
+                       </div> 
+                       <a href="link_href"> 
+                       <div class="icon">
+                        <img src="icon/Vector4.svg" alt="icon-1">
+                       </div> 
+                       <a href="link_href"> 
+                       <div class="icon">
+                        <img src="icon/Vector5.svg" alt="icon-1">
+                       </div> 
+                       <a href="link_href"> 
+                       <div class="icon">
+                        <img src="icon/Vector6.svg" alt="icon-1">
+                       </div> 
+
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                <div class="left_2">
+                    <div class="left_2-1">
+                        <div class="age">Age </div>
+                        <div class="frame_20"><%=user.age%></div>
+                    </div>
+                    <div class="left_2-2">
+                        <div class="residance">Residence</div>
+                        <div class="r_type"><%=user.residence%></div>
+                    </div>
+                    <div class="left_2-3">
+                        <div class="freelance">Freelance</div>
+                        <div class="f_type">Available</div>
+                    </div>
+                    <div class="left_2-4">
+                        <div class="address">Address</div>
+                        <div class="a_type"><%=user.address%></div>
+                    </div>
+                </div>
+                <div class="marginer"></div>
+                 <div class="left_3">
+                   <div class="left3-0">
+                    <div class="languages">Skills</div>
+                    </div>
+                   <div class="left3-1">
+                    <div class="uzbek">Uzbek</div>
+                    <div class="u_p">100%</div>
+                    </div> 
+
+                    <div class="left3-2">
+                        <div class="korean">Korean</div>
+                        <div class="k_p">80%</div>
+                    </div>
+
+                    <div class="left3-3">
+                        <div class="english">English</div>
+                        <div class="e_p">60%</div>
+                    </div>
+                 </div>
+                <div class="marginer"></div>
+                 <div class="left_4">
+                   <div class="left4-0">
+                    <div class="skills">Skills</div>
+                    </div>
+                   <div class="left4-1">
+                    <div class="html">HTML</div>
+                    <div class="h_p">90%</div>
+                    </div> 
+                    <div class="left4-2">
+                        <div class="css">Css</div>
+                        <div class="c_p">80%</div>
+                    </div>
+
+                    <div class="left4-3">
+                        <div class="js">Js</div>
+                        <div class="j_p">80%</div>
+                    </div>
+                    <div class="left4-4">
+                        <div class="nodejs">NodeJs</div>
+                        <div class="n_p">75%</div>
+                    </div>
+                     <div class="left4-5">
+                        <div class="python">Python</div>
+                        <div class="p_p">85%</div>
+                    </div>
+                 </div>
+                <div class="marginer"></div>
+                 <div class="left_5">
+                  <div class="left5-0">
+                    <div class="e_skills">Extra skills</div>
+                    </div>
+                   <div class="left5-1">
+                    <div class="boot"><p>Bootstrap,Materialze</p></div>
+                    </div> 
+                    <div class="left5-2">
+                        <div class="stylus"><p>Styluss,Sass,Less</p></div>
+                    </div>
+
+                    <div class="left5-3">
+                        <div class="js"><p>Gulp,Webpack,Grunt</p></div>
+                    </div>
+                    <div class="left5-4">
+                        <div class="git"><p>GitKnowledge</p></div>
+                    </div>
+                 </div>
+                <div class="marginer"></div>
+            </div>
+            <div class="midd_frame">
+               <div class="main_menu">
+                <div class="main_right">
+                   <div class="work_place"><%=user.work_place%></div> 
+                   <div class="w_info">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, volutpat feugiat placerat lobortis. Natoque rutrum semper sed suspendisse nunc lectus. 
+                   </div>
+                   <div class="w_button"></div>
+                </div>
+                <div class="main_left">
+                    <img src="/author/images/image_1.png"
+                    width="156px"
+                    height="142px"
+                     alt="">
+                </div>
+               </div>
+               <div class="my_service"></div>
+             </div>
+              <div class="right_frame"></div>
+        </div>
+    </div>
+</body>
+
+</html>
