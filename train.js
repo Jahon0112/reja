@@ -1,53 +1,67 @@
+
+
+//MITASK -Task
+function countLetter(soz, harf) {
+    let count = 0;
+    for (x of soz) {
+      if (harf === x) {
+        count = count + 1;
+      }
+    }
+    return count;
+  }
+console.log(countLetter("engineer", "e"))
+
 //B-Task, 
 //Asynchronous function
-console.log("Jck Ma maslahatlari");
-const list = [
-    "yaxshi talaba bo'ling",  //0-20
-    "tog'ri boshliq tanlang va ko'proq xato qiling", //20-30
-    "uzingizga ishlashningizni boshlang", //30-40
-    "siz kuchli bolgan narsalarni qiling", //40-50
-    "yoshlarga investitsiya qiling", //50-60
-    "endi dam oling, foydasi yoq endi" //60
-];
+//console.log("Jck Ma maslahatlari");
+// const list = [
+//     "yaxshi talaba bo'ling",  //0-20
+//     "tog'ri boshliq tanlang va ko'proq xato qiling", //20-30
+//     "uzingizga ishlashningizni boshlang", //30-40
+//     "siz kuchli bolgan narsalarni qiling", //40-50
+//     "yoshlarga investitsiya qiling", //50-60
+//     "endi dam oling, foydasi yoq endi" //60
+// ];
 
-async function maslahatBering(a){
-    if (typeof a !==  "number") throw new Error("insert a number", null);
-    else if (a <= 20) return  list[0];
-    else if (a > 20 && a <= 30) return list[1];
-    else if (a > 30 && a <= 40) return list[2];
-    else if (a > 40 && a <= 50) return list[3];
-    else if (a > 50 && a <= 60) return list[4];
-    else{
-        return new Promise((resolve, reject) => {
-            setTimeout (() => {
-                resolve(list[5]);
-            },5000);
+// async function maslahatBering(a){
+//     if (typeof a !==  "number") throw new Error("insert a number", null);
+//     else if (a <= 20) return  list[0];
+//     else if (a > 20 && a <= 30) return list[1];
+//     else if (a > 30 && a <= 40) return list[2];
+//     else if (a > 40 && a <= 50) return list[3];
+//     else if (a > 50 && a <= 60) return list[4];
+//     else{
+//         return new Promise((resolve, reject) => {
+//             setTimeout (() => {
+//                 resolve(list[5]);
+//             },5000);
 
-        });
-    //  setTimeout(function() {
-    //    return list[5]);
-    //   }, 5000);   
-    }
-}
-//call via then/catch
-// console.log('passed here 0');
-// maslahatBering(45) .then((data) =>{
-//     console.log('javob:',data);
-// }).catch((err) =>{
-//     console.log("ERROR:", err);
-// });
-// console.log('passed here 1');
+//         });
+//     //  setTimeout(function() {
+//     //    return list[5]);
+//     //   }, 5000);   
+//     }
+// }
+// //call via then/catch
+// // console.log('passed here 0');
+// // maslahatBering(45) .then((data) =>{
+// //     console.log('javob:',data);
+// // }).catch((err) =>{
+// //     console.log("ERROR:", err);
+// // });
+// // console.log('passed here 1');
 
-//call via asyn/await
-async function run(){
-    let javob = await maslahatBering(65);
-    console.log(javob);
-    javob = await maslahatBering(31);
-    console.log(javob);
-    javob = await maslahatBering(41);
-    console.log(javob);
-}
-run();
+// //call via asyn/await
+// async function run(){
+//     let javob = await maslahatBering(65);
+//     console.log(javob);
+//     javob = await maslahatBering(31);
+//     console.log(javob);
+//     javob = await maslahatBering(41);
+//     console.log(javob);
+// }
+// run();
 
 //A-Task,NodeJS event loop
 // console.log("Jck Ma maslahatlari");
