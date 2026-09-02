@@ -1,16 +1,28 @@
 
-
 //MITASK -Task
-function countLetter(soz, harf) {
+function countDigits(son) {
     let count = 0;
-    for (x of soz) {
-      if (harf === x) {
-        count = count + 1;
+    for (let x of son) {
+      if (x >= 0 && x <=9) {
+        count += 1;
       }
     }
-    return count;
-  }
-console.log(countLetter("engineer", "e"))
+    return count
+};
+console.log(countDigits("ad2a54y79wet0sfgb9"));
+
+  
+// //MITASK -Task
+// function countLetter(soz, harf) {
+//     let count = 0;
+//     for (x of soz) {
+//       if (harf === x) {
+//         count = count + 1;
+//       }
+//     }
+//     return count;
+//   }
+// console.log(countLetter("engineer", "e"))
 
 //B-Task, 
 //Asynchronous function
