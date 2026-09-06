@@ -1,15 +1,24 @@
+//MITASK C-Task
+function checkContent(str1, str2) {
+    let str1Sorted = str1.split("").sort().join("");
+    let str2Sorted = str2.split("").sort().join("");
+    return str1Sorted === str2Sorted;
+}
 
-//MITASK -Task
-function countDigits(son) {
-    let count = 0;
-    for (let x of son) {
-      if (x >= 0 && x <=9) {
-        count += 1;
-      }
-    }
-    return count
-};
-console.log(countDigits("ad2a54y79wet0sfgb9"));
+console.log(checkContent("mitgroup", "gmtiprou"))
+
+
+// //MITASK -Task
+// function countDigits(son) {
+//     let count = 0;
+//     for (let x of son) {
+//       if (x >= 0 && x <=9) {
+//         count += 1;
+//       }
+//     }
+//     return count
+// };
+// console.log(countDigits("ad2a54y79wet0sfgb9"));
 
   
 // //MITASK -Task
