@@ -1,11 +1,67 @@
-//MITASK C-Task
-function checkContent(str1, str2) {
-    let str1Sorted = str1.split("").sort().join("");
-    let str2Sorted = str2.split("").sort().join("");
-    return str1Sorted === str2Sorted;
-}
+//MITASK D-Task
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.products = {
+      non: non,
+      lagmon: lagmon,
+      cola: cola
+    };
+  }
 
-console.log(checkContent("mitgroup", "gmtiprou"))
+  _getTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
+  }
+
+  qoldiq() {
+    const time = this._getTime();
+    const { non, lagmon, cola } = this.products;
+    const result = `hozir ${time}da ${non}ta non, ${lagmon}ta lagmon va ${cola}ta cola mavjud!`;
+    console.log(result);
+    return result;
+  }
+
+  sotish(productName, quantity) {
+    const time = this._getTime();
+    if (this.products[productName] !== undefined) {
+      if (this.products[productName] >= quantity) {
+        this.products[productName] -= quantity;
+        console.log(`[${time}] Sotildi: ${quantity}ta ${productName}`);
+      } else {
+        console.log(`[${time}] Xatolik: Omborda yetarli ${productName} yo'q!`);
+      }
+    } else {
+      console.log(`[${time}] Xatolik: Bunday mahsulot mavjud emas!`);
+    }
+  }
+
+  qabul(productName, quantity) {
+    const time = this._getTime();
+    if (this.products[productName] !== undefined) {
+      this.products[productName] += quantity;
+      console.log(`[${time}] Qabul qilindi: ${quantity}ta ${productName}`);
+    } else {
+      console.log(`[${time}] Xatolik: Bunday mahsulot mavjud emas!`);
+    }
+  }
+}
+const shop = new Shop(4, 5, 2);
+shop.qoldiq();
+shop.sotish('non', 3);
+shop.qabul('cola', 4);
+shop.qoldiq();
+
+
+// //MITASK C-Task
+// function checkContent(str1, str2) {
+//     let str1Sorted = str1.split("").sort().join("");
+//     let str2Sorted = str2.split("").sort().join("");
+//     return str1Sorted === str2Sorted;
+// }
+
+// console.log(checkContent("mitgroup", "gmtiprou"))
 
 
 // //MITASK -Task
