@@ -43,10 +43,10 @@ app.post("/create-item",(req,res)=>{
      });
     });
   
-// app.get("/author", (req,res) =>{
-//     // question
-//     res.render("author", {user: user});
-// });
+app.get("/author", (req,res) =>{
+    // question
+    res.render("author", {user: user});
+});
 
 app.post("/delete-item", (req,res) =>{
     const id = req.body.id;
@@ -64,7 +64,7 @@ app.post("/edit_item",(req,res) =>{
         res.json({state: "success"});
     });
     });
-
+//rest API
     app.post("/delete-all",(req,res)=>{
         if(req.body.delete_all){
             db.collection("plans").deleteMany({}, function(){
@@ -72,6 +72,7 @@ app.post("/edit_item",(req,res) =>{
             })
         }
     })
+    //traditional API
 
 app.get("/",function(req, res){
     console.log("user entered /");
