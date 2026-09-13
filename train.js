@@ -1,9 +1,17 @@
 //MITASK E-Task
-function getReverse(str) {
-  return new Set(str).size !== str.length;
+let newStr = "hello";
+let countReverse = "";
+for (let i = newStr.length - 1; i >= 0; i--) {
+  countReverse += newStr[i];
 }
+console.log(countReverse);
 
-console.log(getReverse("hello"));
+// //MITASK F-Task
+// function getReverse(str) {
+//   return new Set(str).size !== str.length;
+// }
+
+// console.log(getReverse("hello"));
 
 // //MITASK D-Task
 // class Shop {

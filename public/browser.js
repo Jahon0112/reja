@@ -18,6 +18,7 @@ document.getElementById("create-form")
 e.preventDefault();
 
 axios
+//axios maqsadli obyekt front enddan rest api junatadi, obyekt uni method bor
 .post("/create-item",{reja: createField.value})
 .then((response) => {
     document

@@ -1,6 +1,7 @@
 // question
 const http = require("http");
 const mongodb = require("mongodb");
+//mongodb maqsadli obyekt(connect degan callbackga ega method bor)
 
 let db;
 const connectionString = "mongodb+srv://danny01nny_db_user:ps5hnmZ3VxaSxIpj@cluster0.xlqa6m9.mongodb.net/reja_db";

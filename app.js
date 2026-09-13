@@ -19,6 +19,7 @@ const mongodb = require("mongodb");
 
 
 //1 Kirish code
+//miidleware design pattern
 app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded( {extended: true}));
@@ -27,7 +28,7 @@ app.use(express.urlencoded( {extended: true}));
 
 //3 Visews code
 
-
+//frontend qurish bosqichi
 app.set("views", "views");
 app.set("view engine", "ejs");
 
@@ -64,7 +65,7 @@ app.post("/edit_item",(req,res) =>{
         res.json({state: "success"});
     });
     });
-//rest API
+//rest API 
     app.post("/delete-all",(req,res)=>{
         if(req.body.delete_all){
             db.collection("plans").deleteMany({}, function(){
@@ -74,9 +75,13 @@ app.post("/edit_item",(req,res) =>{
     })
     //traditional API
 
-app.get("/",function(req, res){
+app.get("/",function(req, res){ 
+    // console.log(step1 front enddan backendga kirish)
     console.log("user entered /");
+    // console.log(step2  backendga kirish)
+     // console.log(step3  backendan databasega borish)
     db.collection("plans").find().toArray((err, data) =>{
+         // console.log(step4  databasedan backendga qaytish  )
         if(err){
             console.log(err);
             res.end("something went wrong");
