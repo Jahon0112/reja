@@ -1,10 +1,16 @@
-//MITASK E-Task
-let newStr = "hello";
-let countReverse = "";
-for (let i = newStr.length - 1; i >= 0; i--) {
-  countReverse += newStr[i];
+//MITASK G-Task
+function getHighestIndex(arr) {
+  let max = Math.max(...arr);
+  return arr.indexOf(max);
 }
-console.log(countReverse);
+console.log(getHighestIndex([5, 21, 12, 21, 8]));
+// //MITASK E-Task
+// let newStr = "hello";
+// let countReverse = "";
+// for (let i = newStr.length - 1; i >= 0; i--) {
+//   countReverse += newStr[i];
+// }
+// console.log(countReverse);
 
 // //MITASK F-Task
 // function getReverse(str) {
