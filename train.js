@@ -1,9 +1,15 @@
 //MITASK G-Task
-function getHighestIndex(arr) {
-  let max = Math.max(...arr);
-  return arr.indexOf(max);
+function getPositive(arr) {
+  return arr.filter((num) => num > 0).join(" ");
 }
-console.log(getHighestIndex([5, 21, 12, 21, 8]));
+console.log(getPositive([1, -4, 2]));
+
+// //MITASK G-Task
+// function getHighestIndex(arr) {
+//   let max = Math.max(...arr);
+//   return arr.indexOf(max);
+// }
+// console.log(getHighestIndex([5, 21, 12, 21, 8]));
 // //MITASK E-Task
 // let newStr = "hello";
 // let countReverse = "";
