@@ -1,8 +1,19 @@
-//MITASK G-Task
-function getPositive(arr) {
-  return arr.filter((num) => num > 0).join(" ");
+//MITASK I-TASK
+function majorityElement(arr) {
+  const counts = arr.reduce((acc, num) => {
+    acc[num] = (acc[num] || 0) + 1;
+    return acc;
+  }, {});
+  return Object.keys(counts).reduce((a, b) => (counts[a] > counts[b] ? a : b));
 }
-console.log(getPositive([1, -4, 2]));
+
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+
+// //MITASK G-Task
+// function getPositive(arr) {
+//   return arr.filter((num) => num > 0).join(" ");
+// }
+// console.log(getPositive([1, -4, 2]));
 
 // //MITASK G-Task
 // function getHighestIndex(arr) {
