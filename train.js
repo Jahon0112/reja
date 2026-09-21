@@ -1,13 +1,47 @@
-//MITASK I-TASK
-function majorityElement(arr) {
-  const counts = arr.reduce((acc, num) => {
-    acc[num] = (acc[num] || 0) + 1;
-    return acc;
-  }, {});
-  return Object.keys(counts).reduce((a, b) => (counts[a] > counts[b] ? a : b));
-}
+//MITASK M-TASK
+/**M-TASK
+Shunday function yozing,u raqamlardan tashkil topgan array qabul qilsin 
+va array ichidagi har bir raqam uchun raqamni ozi va hamda osha raqamni 
+kvadratidan tashkil topgan object hosil qilib, hosil bolgan objectlarni array ichida qaytarsin.
+ MASALAN: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, {number: 2, square: 4}, 
+ {number: 3, square: 9}].
+@MITASK**/
+function consgetSquareNumbers(arr) {
+  let newArr = [];
 
-console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+  for (const elem of arr) {
+    let newObj = {};
+
+    newObj["number"] = elem;
+    newObj["square"] = elem * elem;
+    newArr.push(newObj);
+  }
+  return newArr;
+}
+console.log(consgetSquareNumbers([1, 2, 3, 4, 5]));
+
+// function consgetSquareNumbers(arr) {
+//   const count = 0;
+//   const counts = arr.reduce((acc, num) => {
+//     acc[num] = num ** 2;
+//     return acc;
+//   }, {});
+//   return Object.entries(counts);
+//   console.log(counts);
+// }
+
+// console.log(consgetSquareNumbers([1, 2, 3, 4, 5]));
+
+// //MITASK I-TASK
+// function majorityElement(arr) {
+//   const counts = arr.reduce((acc, num) => {
+//     acc[num] = (acc[num] || 0) + 1;
+//     return acc;
+//   }, {});
+//   return Object.keys(counts).reduce((a, b) => (counts[a] > counts[b] ? a : b));
+// }
+
+// console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
 
 // //MITASK G-Task
 // function getPositive(arr) {
