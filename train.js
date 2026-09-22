@@ -6,6 +6,7 @@ kvadratidan tashkil topgan object hosil qilib, hosil bolgan objectlarni array ic
  MASALAN: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, {number: 2, square: 4}, 
  {number: 3, square: 9}].
 @MITASK**/
+//1-way
 function consgetSquareNumbers(arr) {
   let newArr = [];
 
@@ -19,7 +20,7 @@ function consgetSquareNumbers(arr) {
   return newArr;
 }
 console.log(consgetSquareNumbers([1, 2, 3, 4, 5]));
-
+//2-way
 // function consgetSquareNumbers(arr) {
 //   const count = 0;
 //   const counts = arr.reduce((acc, num) => {
